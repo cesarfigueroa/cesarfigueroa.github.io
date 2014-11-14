@@ -1,0 +1,31 @@
+@mixin vendor-prefix($property, $value, $prefixes, $unprefixed: true) {
+  @each $prefix in $prefixes {
+    -#{$prefix}-#{$property}: $value;
+  }
+
+  @if $unprefixed {
+    #{$property}: $value;
+  }
+}
+
+@mixin break-inside($value) {
+  -webkit-column-break-inside: $value; // Chrome, Safari, Opera
+  page-break-inside: $value; // Firefox
+  break-inside: $value; // IE 10+
+}
+
+@mixin columns($value) {
+  @include vendor-prefix(columns, $value, ('moz', 'webkit'));
+}
+
+@mixin column-gap($value) {
+  @include vendor-prefix(column-gap, $value, ('moz', 'webkit'));
+}
+
+@mixin transform($value) {
+  @include vendor-prefix(transform, $value, ('ms', 'moz', 'o', 'webkit'));
+}
+
+@mixin transition($value) {
+  @include vendor-prefix(transition, $value, ('moz', 'o', 'webkit'));
+}

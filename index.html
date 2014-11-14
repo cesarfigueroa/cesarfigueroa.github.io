@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<!-- <section>
+  <h2>Writing</h2>
+
+  <ol class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <a href="{{ post.url }}">
+          <h3>{{ post.title }}</h3>
+          <p>{{ post.description }}</p>
+        </a>
+      </li>
+    {% endfor %}
+  </ol>
+</section> -->
+
+<section>
+  <h2>Capturing</h2>
+
+  <ul class="gallery">
+    {% for photo in site.data.photos %}
+      <li>
+        <img src="/assets/images/{{ photo.name }}.jpg" alt="" class="{{ photo.orientation }}" />
+      </li>
+    {% endfor %}
+  </ul>
+</section>

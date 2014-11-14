@@ -1,0 +1,12 @@
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  color: $color-black;
+  font-family: 'freight-text-pro', serif;
+  line-height: 1.5;
+}
+
+main {
+  margin: ($width-gutter / 2);
+  max-width: $width-layout;
+}

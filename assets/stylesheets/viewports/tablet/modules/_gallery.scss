@@ -1,0 +1,28 @@
+.gallery {
+  @include columns(216px 3);
+  @include column-gap($width-gutter);
+
+  margin-bottom: (-$width-gutter);
+}
+
+.gallery li {
+  @include break-inside(avoid);
+
+  float: none;
+  margin: 0;
+  padding-bottom: $width-gutter;
+  width: auto;
+}
+
+.gallery li:before {
+  content: none;
+}
+
+.gallery img {
+  position: static;
+}
+
+.gallery .landscape {
+  max-height: none;
+  max-width: 100%;
+}

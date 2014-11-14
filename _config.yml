@@ -1,0 +1,12 @@
+author: Cesar Figueroa
+highlighter: pygments
+markdown: redcarpet
+
+exclude:
+  - CNAME
+  - Rakefile
+  - Gemfile
+
+sass:
+  sass_dir: assets/stylesheets
+  style: :compressed

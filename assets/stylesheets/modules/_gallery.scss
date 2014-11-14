@@ -1,0 +1,38 @@
+.gallery {
+  list-style: none;
+  margin: 0 0 relative-percentage(-$width-gutter);
+  padding: 0;
+}
+
+.gallery,
+.gallery li {
+  overflow: hidden;
+}
+
+.gallery li {
+  float: left;
+  height: auto;
+  margin: 0 relative-percentage($width-gutter) relative-percentage($width-gutter) 0;
+  position: relative;
+  width: columns(3);
+}
+
+.gallery li:before {
+  content: '';
+  display: block;
+  padding-top: 100%;
+}
+
+.gallery li:nth-child(even) {
+  margin-right: 0;
+}
+
+.gallery img {
+  position: absolute;
+  top: 0;
+}
+
+.gallery .landscape {
+  max-height: 100%;
+  max-width: none;
+}

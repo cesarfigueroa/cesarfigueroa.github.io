@@ -1,0 +1,40 @@
+p {
+  font-size: 1.25em;
+  margin: 0 0 $height-baseline;
+}
+
+// Headings
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'franklin-gothic-urw', sans-serif;
+  margin: 0;
+}
+
+h1 {
+  font-size: 1.75em;
+  line-height: line-height-for(1.75em);
+}
+
+h2 {
+  font-size: 1.5em;
+  line-height: line-height-for(1.5em);
+}
+
+h2,
+h3 {
+  font-weight: 500;
+}
+
+article h2:first-of-type,
+section h2:first-of-type {
+  margin: 54px 0;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.25em;
+  line-height: line-height-for(1.25em);
+}

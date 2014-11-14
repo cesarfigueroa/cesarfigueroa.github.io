@@ -1,0 +1,18 @@
+h1 {
+  font-size: 2.5em;
+  line-height: (line-height-for(2.5em) * 1.5);
+}
+
+h2 {
+  font-size: 2em;
+  line-height: line-height-for(2em);
+}
+
+article h2:first-of-type,
+section h2:first-of-type {
+  margin: 108px 0;
+}
+
+article p {
+  font-size: 1.5em;
+}

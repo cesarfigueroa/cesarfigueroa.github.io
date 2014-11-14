@@ -1,0 +1,29 @@
+- name: bean
+  orientation: portrait
+
+- name: shrine
+  orientation: portrait
+
+- name: train
+  orientation: portrait
+
+- name: tokyo
+  orientation: landscape
+
+- name: maps
+  orientation: portrait
+
+- name: laugh
+  orientation: portrait
+
+- name: lights
+  orientation: landscape
+
+- name: curves
+  orientation: portrait
+
+- name: pier
+  orientation: portrait
+
+- name: agnes-obel
+  orientation: portrait

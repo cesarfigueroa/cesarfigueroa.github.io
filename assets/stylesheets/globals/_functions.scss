@@ -1,0 +1,21 @@
+@function columns($count, $fixed-value: false) {
+  $target: ($width-column + $width-gutter) * $count - $width-gutter;
+
+  @if $fixed-value {
+    @return $target;
+  } @else {
+    @return percentage($target / $width-layout);
+  }
+}
+
+@function line-height-for($font-size) {
+  @return (((($height-baseline / $base-font-size) / $font-size) * 1em) + 0em);
+}
+
+@function percentage($fraction) {
+  @return (($fraction) + 0.0000001) * 100%;
+}
+
+@function relative-percentage($value) {
+  @return percentage($value / $width-layout);
+}

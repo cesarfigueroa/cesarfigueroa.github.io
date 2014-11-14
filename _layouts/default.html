@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include head.html %}
+  </head>
+
+  <body>
+    <header role="banner" class="banner">
+      <a href="/" class="banner-avatar">
+        <img src="http://cesarfigueroa.org/assets/images/avatar.jpg" />
+      </a>
+
+      <h1 class="banner-title">{{ site.author }} is a Chicago-based designer and front-end developer.</h1>
+    </header>
+
+    <main role="main">
+      {{ content }}
+    </main>
+  </body>
+</html>

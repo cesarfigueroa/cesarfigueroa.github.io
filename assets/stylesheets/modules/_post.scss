@@ -1,0 +1,19 @@
+.post {
+  margin: 0 auto;
+  max-width: columns(4, true);
+}
+
+// Post List
+
+.post-list {
+  list-style: none;
+  margin: 0 0 (-$height-baseline);
+  overflow: hidden;
+  padding: 0;
+}
+
+.post-list a {
+  color: inherit;
+  display: block;
+  text-decoration: none;
+}
