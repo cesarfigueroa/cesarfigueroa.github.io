@@ -23,7 +23,10 @@ layout: default
   <ul class="gallery">
     {% for photo in site.data.photos %}
       <li>
-        <img src="/assets/images/{{ photo.name }}.jpg" alt="" class="{{ photo.orientation }}" />
+        <picture>
+          <source media="(min-width: 540px)" srcset="/assets/images/{{ photo.name }}.jpg 1x, /assets/images/{{ photo.name }}@2x.jpg 2x" />
+          <img src="/assets/images/{{ photo.name }}.jpg" alt="" class="{{ photo.orientation }}" />
+        </picture>
       </li>
     {% endfor %}
   </ul>
