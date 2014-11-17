@@ -10,7 +10,7 @@ layout: default
       <li>
         <a href="{{ post.url }}">
           <h3>{{ post.title }}</h3>
-          <p>{{ post.description }}</p>
+          <p>{{ post.excerpt | escape }}</p>
         </a>
       </li>
     {% endfor %}
