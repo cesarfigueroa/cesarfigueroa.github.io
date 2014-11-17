@@ -3,6 +3,20 @@ p {
   margin: 0 0 $height-baseline;
 }
 
+p a {
+  border-bottom: 1px solid;
+  color: $color-blue;
+  text-decoration: none;
+}
+
+p a:hover {
+  color: lighten($color-blue, 15%);
+}
+
+code {
+  font: 0.8333333333em inconsolata, monospace;
+}
+
 // Headings
 
 h1,
