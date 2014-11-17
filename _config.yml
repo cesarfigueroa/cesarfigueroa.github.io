@@ -1,6 +1,7 @@
 author: Cesar Figueroa
 highlighter: pygments
 markdown: redcarpet
+permalink: /posts/:title/
 
 exclude:
   - CNAME
