@@ -3,6 +3,14 @@ highlighter: pygments
 markdown: redcarpet
 permalink: /posts/:title/
 
+defaults:
+  -
+    scope:
+      path: ''
+      type: posts
+    values:
+      layout: post
+
 exclude:
   - CNAME
   - Rakefile
