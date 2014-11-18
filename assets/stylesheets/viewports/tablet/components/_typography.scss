@@ -8,8 +8,8 @@ h2 {
   line-height: line-height-for(2em);
 }
 
-article h2:first-of-type,
-section h2:first-of-type {
+section h2:first-of-type,
+.post-header {
   margin: 108px 0;
 }
 
