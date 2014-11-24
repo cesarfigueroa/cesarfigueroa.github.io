@@ -1,5 +1,5 @@
 author: Cesar Figueroa
-highlighter: pygments
+highlighter: false
 markdown: redcarpet
 permalink: /posts/:title/
 
