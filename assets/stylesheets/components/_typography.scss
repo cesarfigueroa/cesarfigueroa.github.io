@@ -13,8 +13,18 @@ p a:hover {
   color: lighten($color-blue, 15%);
 }
 
+pre,
 code {
-  font: 0.8333333333em inconsolata, monospace;
+  font-family: inconsolata, monospace;
+}
+
+pre {
+  font-size: 1em;
+  margin: $width-gutter ($width-gutter / 2);
+}
+
+code {
+  font-size: 0.8333333333em;
 }
 
 // Headings
