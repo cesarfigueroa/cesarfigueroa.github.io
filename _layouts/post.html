@@ -16,7 +16,7 @@
     <main role="main">
       <article class="post">
         <div class="post-header">
-          <h2>{{ page.title }}</h2>
+          <h2>{{ page.title | escape }}</h2>
           <time pubdate class="post-date">{{ page.date | date: '%b %e, %Y' }}</time>
         </div>
 
