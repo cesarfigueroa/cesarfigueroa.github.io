@@ -1,7 +1,7 @@
 ---
 title: Rounding Percentages in Sass
 date: 2014-11-30
-excerpt: Getting around Sass’s precision option
+excerpt: Getting around Sass’ precision option
 ---
 
 Whenever you’re using percentages with infinitely repeating decimals, browsers expect a certain amount of decimal points to round correctly—Safari, for instance, is happy with 7. Unfortunately, if you’re running Sass in a controlled environment—such as Jekyll on GitHub Pages—changing Sass’s precision option from it’s default of 5 to something larger isn’t possible.
