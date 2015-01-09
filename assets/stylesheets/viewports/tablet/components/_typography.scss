@@ -13,8 +13,10 @@ section h2:first-of-type,
   margin: 108px 0;
 }
 
-article p {
-  font-size: 1.5em;
+article {
+  p, ul, ol {
+    font-size: 1.5em;
+  }
 }
 
 pre {
