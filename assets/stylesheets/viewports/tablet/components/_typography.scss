@@ -21,3 +21,10 @@ pre {
   font-size: 1.25em;
   margin: $width-gutter;
 }
+
+blockquote {
+  border-left: 3px solid $color-gray;
+  font-style: italic;
+  margin: 0;
+  padding-left: $width-gutter;
+}
