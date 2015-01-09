@@ -1,7 +1,7 @@
 ---
 title: Looping Videos in Chrome and Opera
 date: 2014-12-21
-excerpt: ''
+excerpt: null
 ---
 
 This week, I worked alongside a fellow designer on adding a background video to a marketing page. The video was positioned as a hero image and set to loop forever, so as to provide a taste of what the full video is like (clicking on it revealed the full, audible video). The process was straightforward: optimize the video, add it through the `video` tag with the appropriate attributes, and provide a fallback image for older browsers and mobile devices.
