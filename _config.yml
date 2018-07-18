@@ -15,6 +15,7 @@ exclude:
   - CNAME
   - Rakefile
   - Gemfile
+  - Gemfile.lock
 
 sass:
   sass_dir: assets/stylesheets
