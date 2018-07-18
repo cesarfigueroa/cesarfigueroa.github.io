@@ -6,6 +6,7 @@ $background-color: #111111;
 $border-color: #FFFFFF;
 $link-color: #EE1C25;
 $text-color: #FFFFFF;
+$easeOutQuart: cubic-bezier(0.165, 0.84, 0.44, 1);
 
 * {
   box-sizing: border-box;
@@ -64,19 +65,26 @@ a.link:hover {
   border: 2px solid $border-color;
   height: 144px;
   position: absolute;
+  transition: 200ms $easeOutQuart transform;
   width: 144px;
 }
 
 .avatar-layer-1 {
-  left: 6px;
-  top: 6px;
+  transform: translateX(6px) translateY(6px);
   z-index: 2;
 }
 
 .avatar-layer-2 {
-  left: 12px;
-  top: 12px;
+  transform: translateX(12px) translateY(12px);
   z-index: 1;
+}
+
+.avatar:hover .avatar-layer-1 {
+  transform: translateX(8px) translateY(8px);
+}
+
+.avatar:hover .avatar-layer-2 {
+  transform: translateX(16px) translateY(16px);
 }
 
 .title {
