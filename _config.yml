@@ -1,20 +1,8 @@
-author: Cesar Figueroa
-highlighter: false
-markdown: redcarpet
-permalink: /posts/:title/
-
-defaults:
-  -
-    scope:
-      path: ''
-      type: posts
-    values:
-      layout: post
-
 exclude:
   - CNAME
   - Rakefile
   - Gemfile
+  - Gemfile.lock
 
 sass:
   sass_dir: assets/stylesheets
