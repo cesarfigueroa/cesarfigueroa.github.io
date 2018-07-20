@@ -13,10 +13,23 @@ layout: null
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Space+Mono:400,400i,700" />
     <link rel="stylesheet" href="/assets/styles.css" />
+
+    <script>
+      var setAnimationClass = function() {
+        if (!document.hidden) {
+          document.body.classList.add('reveal-active');
+        }
+      }
+
+      document.addEventListener('DOMContentLoaded', function() {
+        setAnimationClass();
+        document.addEventListener('visibilitychange', setAnimationClass);
+      });
+    </script>
   </head>
 
   <body>
-    <div class="avatar">
+    <div class="avatar reveal-in">
       <img
         class="avatar-image"
         src="/assets/images/avatar@2x.jpg"
@@ -27,11 +40,11 @@ layout: null
       <div class="avatar-layer avatar-layer-2"></div>
     </div>
 
-    <h1 class="title">
+    <h1 class="title reveal-in" style="animation-delay: 100ms">
       <span class="title-greeting">Hi!</span> I’m Cesar, a user interface engineer working in Chicago.
     </h1>
 
-    <p class="intro">I’m helping build the future of auto insurance at
+    <p class="intro reveal-in" style="animation-delay: 200ms">I’m helping build the future of auto insurance at
       <a href="https://clearcover.com/" class="link">Clearcover</a>, where I lead the development of our iOS and Android apps. I’m passionate about
       <span class="intro-interest">graphic design</span>,
       <span class="intro-interest">art</span>,
@@ -40,8 +53,8 @@ layout: null
       <span class="intro-interest">fashion</span>.
     </p>
 
-    <h2 class="subtitle">Recent Work</h2>
-    <ul class="projectList">
+    <h2 class="subtitle reveal-in" style="animation-delay: 300ms">Recent Work</h2>
+    <ul class="projectList reveal-in" style="animation-delay: 300ms">
       {% for project in site.data.projects %}
         <li>
           <a href="{{ project.url }}">
@@ -64,8 +77,8 @@ layout: null
       {% endfor %}
     </ul>
 
-    <h2 class="subtitle">Photography</h2>
-    <ul class="photoList">
+    <h2 class="subtitle reveal-in" style="animation-delay: 400ms">Photography</h2>
+    <ul class="photoList reveal-in" style="animation-delay: 400ms">
       {% for photo in site.data.photos %}
         <li>
           <div class="thumbnail">

@@ -168,6 +168,24 @@ a.link:hover {
   max-width: 100%;
 }
 
+.reveal-active .reveal-in {
+  opacity: 0;
+  transform: translateY(-12px);
+  animation: reveal 550ms 1 forwards;
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media (max-width: 648px) {
   body {
     margin: 27px;
