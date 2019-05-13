@@ -3,10 +3,9 @@ layout: null
 ---
 
 $background-color: #111111;
-$border-color: #FFFFFF;
-$link-color: #EE1C25;
-$text-color: #FFFFFF;
-$easeOutQuart: cubic-bezier(0.165, 0.84, 0.44, 1);
+$border-color: #ffffff;
+$link-color: #ee1c25;
+$text-color: #ffffff;
 
 * {
   box-sizing: border-box;
@@ -54,35 +53,83 @@ a.link:hover {
   position: absolute;
   user-select: none;
   width: 144px;
-  z-index: 3;
+  z-index: 4;
 }
 
 .avatar-layer {
   background: $background-color;
   border-radius: 3px;
-  border: 2px solid $border-color;
+  border-width: 2px;
+  border-style: solid;
   height: 144px;
   position: absolute;
-  transition: 200ms $easeOutQuart transform;
   width: 144px;
 }
 
+.avatar-layer-0 {
+  border-color: rgba(255, 255, 255, 0.75);
+  transform: translate3d(0, 0, 0);
+  z-index: 3;
+}
+
 .avatar-layer-1 {
-  transform: translateX(6px) translateY(6px);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translate3d(7px, 7px, 0);
   z-index: 2;
 }
 
 .avatar-layer-2 {
-  transform: translateX(12px) translateY(12px);
+  border-color: rgba(255, 255, 255, 0.25);
+  transform: translate3d(14px, 14px, 0);
   z-index: 1;
 }
 
+@keyframes layer-0-animation {
+  from {
+    border-color: rgba(255, 255, 255, 0.75);
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translate3d(7px, 7px, 0);
+  }
+}
+
+@keyframes layer-1-animation {
+  from {
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translate3d(7px, 7px, 0);
+  }
+
+  to {
+    border-color: rgba(255, 255, 255, 0.25);
+    transform: translate3d(14px, 14px, 0);
+  }
+}
+
+@keyframes layer-2-animation {
+  from {
+    border-color: rgba(255, 255, 255, 0.25);
+    transform: translate3d(14px, 14px, 0);
+  }
+
+  to {
+    border-color: rgba(255, 255, 255, 0);
+    transform: translate3d(21px, 21px, 0);
+  }
+}
+
+.avatar:hover .avatar-layer-0 {
+  animation: layer-0-animation 800ms infinite;
+}
+
 .avatar:hover .avatar-layer-1 {
-  transform: translateX(8px) translateY(8px);
+  animation: layer-1-animation 800ms infinite;
 }
 
 .avatar:hover .avatar-layer-2 {
-  transform: translateX(16px) translateY(16px);
+  animation: layer-2-animation 800ms infinite;
 }
 
 .title {
@@ -184,7 +231,7 @@ a.link:hover {
   }
 
   .thumbnail:before {
-    content: "";
+    content: '';
     display: block;
     padding-top: 100%;
   }

@@ -7,11 +7,17 @@ layout: null
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
     <title>Cesar Figueroa</title>
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Space+Mono:400,400i,700" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Space+Mono:400,400i,700"
+    />
     <link rel="stylesheet" href="/assets/styles.css" />
   </head>
 
@@ -20,22 +26,30 @@ layout: null
       <img
         class="avatar-image"
         src="/assets/images/avatar@2x.jpg"
-        srcset="/assets/images/avatar@2x.jpg 2x, /assets/images/avatar@3x.jpg 3x"
+        srcset="
+          /assets/images/avatar@2x.jpg 2x,
+          /assets/images/avatar@3x.jpg 3x
+        "
       />
 
+      <div class="avatar-layer avatar-layer-0"></div>
       <div class="avatar-layer avatar-layer-1"></div>
       <div class="avatar-layer avatar-layer-2"></div>
     </div>
 
     <h1 class="title">
-      <span class="title-greeting">Hi!</span> I’m Cesar, a user interface engineer working in Chicago.
+      <span class="title-greeting">Hi!</span> I’m Cesar, a user interface
+      engineer working in Chicago.
     </h1>
 
-    <p class="intro">I’m helping build the future of auto insurance at
-      <a href="https://clearcover.com/" class="link">Clearcover</a>, where I lead the development of our iOS and Android apps. I’m passionate about
+    <p class="intro">
+      I’m helping build the future of auto insurance at
+      <a href="https://clearcover.com/" class="link">Clearcover</a>, where I
+      lead the development of our iOS and Android apps. I’m passionate about
       <span class="intro-interest">graphic design</span>,
       <span class="intro-interest">art</span>,
       <span class="intro-interest">photography</span>,
+      <span class="intro-interest">coffee</span>,
       <span class="intro-interest">travel</span> and
       <span class="intro-interest">fashion</span>.
     </p>
@@ -43,41 +57,41 @@ layout: null
     <h2 class="subtitle">Recent Work</h2>
     <ul class="projectList">
       {% for project in site.data.projects %}
-        <li>
-          <a href="{{ project.url }}">
-            <div class="project">
-              <div class="project-icon">
-                <img class="project-iconImage" src="{{ project.iconUrl }}" />
-              </div>
-
-              <div class="project-description">
-                <p class="project-title">{{ project.title }}</p>
-                <ul class="project-tagList">
-                  {% for tag in project.tags %}
-                    <li class="project-tagListItem">#{{ tag }}</li>
-                  {% endfor %}
-                </ul>
-              </div>
+      <li>
+        <a href="{{ project.url }}">
+          <div class="project">
+            <div class="project-icon">
+              <img class="project-iconImage" src="{{ project.iconUrl }}" />
             </div>
-          </a>
-        </li>
+
+            <div class="project-description">
+              <p class="project-title">{{ project.title }}</p>
+              <ul class="project-tagList">
+                {% for tag in project.tags %}
+                <li class="project-tagListItem">#{{ tag }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        </a>
+      </li>
       {% endfor %}
     </ul>
 
     <h2 class="subtitle">Photography</h2>
     <ul class="photoList">
       {% for photo in site.data.photos %}
-        <li>
-          <div class="thumbnail">
-            <a href="{{ photo.url }}">
-              <img
-                class="thumbnail-image"
-                src="/assets/images/gallery/{{ photo.imageFileName }}@2x.jpg"
-                srcset="/assets/images/gallery/{{ photo.imageFileName }}@2x.jpg 2x, /assets/images/gallery/{{ photo.imageFileName }}@3x.jpg 3x"
-              />
-            </a>
-          </div>
-        </li>
+      <li>
+        <div class="thumbnail">
+          <a href="{{ photo.url }}">
+            <img
+              class="thumbnail-image"
+              src="/assets/images/gallery/{{ photo.imageFileName }}@2x.jpg"
+              srcset="/assets/images/gallery/{{ photo.imageFileName }}@2x.jpg 2x, /assets/images/gallery/{{ photo.imageFileName }}@3x.jpg 3x"
+            />
+          </a>
+        </div>
+      </li>
       {% endfor %}
     </ul>
   </body>
