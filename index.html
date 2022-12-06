@@ -19,80 +19,195 @@ layout: null
       href="https://fonts.googleapis.com/css?family=Space+Mono:400,400i,700"
     />
     <link rel="stylesheet" href="/assets/styles.css" />
+
+    <script src="dist/bundle.js"></script>
   </head>
 
   <body>
-    <div class="avatar">
-      <img
-        class="avatar-image"
-        src="/assets/images/avatar@2x.jpg"
-        srcset="
-          /assets/images/avatar@2x.jpg 2x,
-          /assets/images/avatar@3x.jpg 3x
-        "
-      />
+    <main>
+      <div style="position: absolute; top: 24px; right: 24px; color: red">
+        <img src="/assets/images/moon.svg" />
+      </div>
 
-      <div class="avatar-layer avatar-layer-0"></div>
-      <div class="avatar-layer avatar-layer-1"></div>
-      <div class="avatar-layer avatar-layer-2"></div>
-    </div>
+      <h1>
+        <!-- <div id="container"></div> -->
+        <span style="font-weight: 800">Hey,</span><br />
+        I’m Cesar Figueroa,<br />a digital product engineer
+      </h1>
 
-    <h1 class="title">
-      <span class="title-greeting">Hi!</span> I’m César, a user interface
-      engineer working in NYC
-    </h1>
+      <h2>
+        I lead projects and teams making durable, inclusive, and delightful
+        software for web and mobile. For over a decade, I’ve helped companies of
+        all sizes—from early-stage startups to well established giants—bring
+        digital experiences to their audiences
+      </h2>
 
-    <p class="intro">
-      I’m helping build the future of auto insurance at
-      <a href="https://clearcover.com/" class="link">Clearcover</a>, where I
-      lead the development of our iOS and Android apps. I’m passionate about
-      <span class="intro-interest">graphic design</span>,
-      <span class="intro-interest">art</span>,
-      <span class="intro-interest">photography</span>,
-      <span class="intro-interest">coffee</span>,
-      <span class="intro-interest">travel</span> and
-      <span class="intro-interest">fashion</span>.
-    </p>
+      <section>
+        <h3>Selected Works</h3>
 
-    <h2 class="subtitle">Recent Work</h2>
-    <ul class="projectList">
-      {% for project in site.data.projects %}
-      <li>
-        <a href="{{ project.url }}">
-          <div class="project">
-            <div class="project-icon">
-              <img class="project-iconImage" src="{{ project.iconUrl }}" />
-            </div>
+        <div class="tile">
+          <div class="tile-content">
+            <h4 class="tile-heading">clearcover</h4>
+            <p class="tile-description">
+              Making car insurance easier and more accessible
+            </p>
 
-            <div class="project-description">
-              <p class="project-title">{{ project.title }}</p>
-              <ul class="project-tagList">
-                {% for tag in project.tags %}
-                <li class="project-tagListItem">#{{ tag }}</li>
-                {% endfor %}
-              </ul>
-            </div>
+            <ul class="tagList">
+              <li>
+                <!-- <strong>Role</strong> -->
+                Engineering Manager
+              </li>
+              <li>
+                <!-- <strong>Platform</strong> -->
+                iOS, Android
+              </li>
+              <!-- <li>
+                <strong>Stack</strong> Typescript, Swift, React Native, Node.js,
+                RxJS, AWS
+              </li> -->
+            </ul>
           </div>
-        </a>
-      </li>
-      {% endfor %}
-    </ul>
 
-    <h2 class="subtitle">Photography</h2>
-    <ul class="photoList">
-      {% for photo in site.data.photos %}
-      <li>
-        <div class="thumbnail">
-          <a href="{{ photo.url }}">
+          <div class="tile-image-mask">
             <img
-              class="thumbnail-image"
-              src="/assets/images/gallery/{{ photo.imageFileName }}@2x.jpg"
-              srcset="/assets/images/gallery/{{ photo.imageFileName }}@2x.jpg 2x, /assets/images/gallery/{{ photo.imageFileName }}@3x.jpg 3x"
+              src="/assets/images/clearcover-preview.png"
+              class="tile-image"
             />
-          </a>
+          </div>
         </div>
-      </li>
-      {% endfor %}
-    </ul>
+
+        <div class="app-selector">
+          <div class="app-selector-item selected">
+            <div class="app-selector-icon">
+              <img src="/assets/images/clearcover.png" />
+            </div>
+            <span class="app-selector-label selected">Clearcover</span>
+          </div>
+
+          <div class="app-selector-item">
+            <div class="app-selector-icon">
+              <img src="/assets/images/okcupid.png" />
+            </div>
+            <span class="app-selector-label">OkCupid</span>
+          </div>
+
+          <div class="app-selector-item">
+            <div class="app-selector-icon">
+              <img src="/assets/images/rise.png" />
+            </div>
+            <span class="app-selector-label">Rise</span>
+          </div>
+
+          <div class="app-selector-item">
+            <div class="app-selector-icon">
+              <img src="/assets/images/stigma.png" />
+            </div>
+            <span class="app-selector-label">STIGMA</span>
+          </div>
+        </div>
+
+        <!-- <div class="tile">
+          <h4 class="tile-heading">Rise</h4>
+          <p class="tile-description">
+            Helping people improve their sleep and daily energy
+          </p>
+
+          <ul class="tagList">
+            <li><strong>Role</strong> Lead Engineer</li>
+            <li><strong>Platform</strong> iOS</li>
+            <li><strong>Stack</strong> Typescript, React Native, GCP</li>
+          </ul>
+        </div> -->
+      </section>
+
+      <section>
+        <h3>Experience</h3>
+
+        <div class="experience">
+          <h4 class="experience-title" id="experienceTitle">Native.dev</h4>
+          <p class="experience-desc" id="experienceDesc">
+            Co-founded a software engineering studio, working with select
+            clients on early stage projects<span class="separator"></span>Led
+            engineering hiring and training<span class="separator"></span
+            >Developed an in-house framework for use in projects, based on typed
+            functional programming and streams
+            <!-- Partnered in a CTO capacity for an
+            early-stage startup<span class="separator"></span>Led development
+            for a social media platform, building the initial iOS app and
+            TypeScript backend services<span class="separator"></span>Embedded
+            Rust FFI layer on iOS to securely communicate Ethereum & Solana
+            transactions to JSCore<span class="separator"></span>Established
+            domain-driven architecture -->
+          </p>
+        </div>
+
+        <div class="experience">
+          <h4 class="experience-title disabled">STIGMA</h4>
+          <span class="separator"></span>
+          <h4 class="experience-title disabled">Match Group</h4>
+          <span class="separator"></span>
+          <h4 class="experience-title disabled">Rise</h4>
+          <span class="separator"></span>
+          <h4 class="experience-title disabled">Clearcover</h4>
+          <span class="separator"></span>
+          <h4 class="experience-title disabled">ReviewTrackers</h4>
+          <span class="separator"></span>
+          <h4 class="experience-title disabled">ReviewTrackers</h4>
+          <span class="separator"></span>
+          <h4 class="experience-title disabled">Avant</h4>
+          <span class="separator"></span>
+          <h4 class="experience-title disabled">8th Light</h4>
+        </div>
+      </section>
+
+      <section>
+        <h3>Strenghts &amp; Interests</h3>
+
+        <p>
+          Interface design<span class="separator"></span>Functional
+          programming<span class="separator"></span>Type theory<span
+            class="separator"
+          ></span
+          >Systems design and architecture<span class="separator"></span
+          >Animation
+        </p>
+      </section>
+
+      <section>
+        <h3>RECOGNITION</h3>
+
+        <p>
+          <a
+            href="https://www.builtinchicago.org/spotlight/2019/05/14/clearcover-insurance-chicago-careers"
+            >Built In Chicago</a
+          >
+          <span class="separator"></span>Web Marketing Association Award (<a
+            href="https://www.mobile-webaward.org/mwa/winner.asp?eid=11838"
+            >2019</a
+          >,
+          <a href="https://www.mobile-webaward.org/mwa/winner.asp?eid=11968"
+            >2020</a
+          >)<span class="separator"></span
+          ><a href="https://chicagoinnovation.com/winners/clearcover/"
+            >Chicago Innovation Award</a
+          >
+        </p>
+      </section>
+
+      <section>
+        <h3>ELSEWHERE</h3>
+        <a class="email" href="mailto:hello@csrf.gr">hello<wbr />@csrf.gr</a>
+
+        <p>
+          <a href="https://www.linkedin.com/in/cesar-figueroa/">LinkedIn</a
+          ><span class="separator"></span
+          ><a href="https://github.com/cesarfigueroa">GitHub</a
+          ><span class="separator"></span
+          ><a href="https://dribbble.com/cesar">Dribbble</a>
+        </p>
+
+        <p class="credits">Made in Brooklyn, NY</p>
+      </section>
+    </main>
   </body>
 </html>

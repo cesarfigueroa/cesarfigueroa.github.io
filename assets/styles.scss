@@ -2,245 +2,387 @@
 layout: null
 ---
 
-$background-color: #111111;
-$border-color: #ffffff;
-$link-color: #ee1c25;
-$text-color: #ffffff;
+// :root {
+//   --color-blue: #0B0089;
+//   --color-orange: #CE5D24;
+// }
+
+// * {
+//   box-sizing: border-box;
+// }
+
+// body {
+//   margin: 0;
+//   font-family: 'PP Neue Machina';
+// }
+
+// h1 {
+//   font-family: 'PP Neue Machina';
+//   font-size: 42px;
+//   line-height: 64px;
+//   font-weight: 300;
+// }
+
+// h2 {
+//   font-family: 'PP Neue Machina';
+//   font-size: 32px;
+//   line-height: 48px;
+//   font-weight: 300;
+// }
+
+// strong {
+//   font-weight: 700;
+// }
+
+// main {
+//   width: 832px;
+//   margin: 240px auto 0;
+// }
+
+// section {
+//   margin-top: 64px;
+// }
+
+// section h3 {
+//   font-family: 'PP Neue Machina';
+//   font-style: normal;
+//   font-weight: 800;
+//   font-size: 16px;
+//   line-height: 24px;
+//   letter-spacing: 3%;
+//   text-transform: uppercase;
+// }
+
+// section h4 {
+//   font-family: 'PP Neue Machina';
+//   font-style: normal;
+//   font-weight: 700;
+//   font-size: 48px;
+//   line-height: 140%;
+//   color: --color-blue;
+// }
+
+:root {
+  --color-blue: #0b0089;
+  --color-orange: #ce5d24;
+  --color-white: #fff;
+  --color-text: rgba(11, 0, 137, 1);
+  --color-bg: var(--color-white);
+}
 
 * {
   box-sizing: border-box;
 }
 
-::selection {
-  background: $link-color;
+// @font-face {
+//   font-family: "PP Neue Machina";
+//   src: url("../assets/fonts/PPNeueMachina-PlainUprightVariable.woff2")
+//     format("woff2");
+// }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text: var(--color-white);
+    --color-bg: #0f0065;
+  }
 }
 
 body {
-  -webkit-font-smoothing: antialiased;
-  background: $background-color;
-  color: $text-color;
-  font-family: 'Space Mono', monospace;
   margin: 0;
-  margin: 54px;
-  max-width: 540px;
+  font-family: "PP Neue Machina";
+  color: var(--color-text);
+  background: var(--color-bg);
+  // -webkit-font-smoothing: antialiased;
+  // -moz-osx-font-smoothing: antialiased;
+}
+
+h1 {
+  font-family: "PP Neue Machina";
+  font-size: 42px;
+  line-height: 64px;
+  font-weight: 300;
+  // font-variation-settings: "wght" 300;
+  color: var(--color-text);
+}
+
+// #intro {
+//   font-variation-settings: "wght" 700;
+//   // font-weight: 700;
+// }
+
+#intro-char-0 {
+  // font-variation-settings: "wght" 300;
+  font-weight: 300;
+}
+
+#intro-char-1 {
+  // font-variation-settings: "wght" 300;
+  font-weight: 300;
+}
+
+#intro-char-2 {
+  // font-variation-settings: "wght" 350;
+  font-weight: 350;
+}
+
+#intro-char-3 {
+  // font-variation-settings: "wght" 400;
+  font-weight: 400;
+}
+
+#intro-char-4 {
+  // font-variation-settings: "wght" 450;
+  font-weight: 450;
+}
+
+#intro-char-5 {
+  // font-variation-settings: "wght" 500;
+  font-weight: 500;
+}
+
+#intro-char-6 {
+  // font-variation-settings: "wght" 550;
+  font-weight: 550;
+}
+
+#intro-char-7 {
+  // font-variation-settings: "wght" 600;
+  font-weight: 600;
+}
+
+#intro-char-8 {
+  // font-variation-settings: "wght" 650;
+  font-weight: 650;
+}
+
+h2 {
+  font-family: "PP Neue Machina";
+  font-size: 32px;
+  line-height: 48px;
+  font-weight: 250;
+  // font-variation-settings: "wght" 200;
+  color: var(--color-text);
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+  color: var(--color-text);
+  text-decoration-thickness: 4px;
+  text-decoration-color: rgba(11, 0, 137, 0.15);
+  text-underline-offset: 5px;
+  text-decoration-skip-ink: auto;
 }
 
-a.link {
-  border-bottom: 2px solid $link-color;
-  transition: color ease-in-out 200ms;
-}
-
-a.link:hover {
-  color: $link-color;
-}
-
-.avatar {
-  height: 156px;
-  margin-bottom: 56px;
-  position: relative;
-  width: 156px;
-}
-
-.avatar-image {
-  border-radius: 3px;
-  border: 2px solid $border-color;
-  height: 144px;
-  position: absolute;
-  user-select: none;
-  width: 144px;
-  z-index: 4;
-}
-
-.avatar-layer {
-  background: $background-color;
-  border-radius: 3px;
-  border-width: 2px;
-  border-style: solid;
-  height: 144px;
-  position: absolute;
-  width: 144px;
-}
-
-.avatar-layer-0 {
-  border-color: rgba(255, 255, 255, 0.75);
-  transform: translate3d(0, 0, 0);
-  z-index: 3;
-}
-
-.avatar-layer-1 {
-  border-color: rgba(255, 255, 255, 0.5);
-  transform: translate3d(7px, 7px, 0);
-  z-index: 2;
-}
-
-.avatar-layer-2 {
-  border-color: rgba(255, 255, 255, 0.25);
-  transform: translate3d(14px, 14px, 0);
-  z-index: 1;
-}
-
-@keyframes layer-0-animation {
-  from {
-    border-color: rgba(255, 255, 255, 0.75);
-    transform: translate3d(0, 0, 0);
-  }
-
-  to {
-    border-color: rgba(255, 255, 255, 0.5);
-    transform: translate3d(7px, 7px, 0);
-  }
-}
-
-@keyframes layer-1-animation {
-  from {
-    border-color: rgba(255, 255, 255, 0.5);
-    transform: translate3d(7px, 7px, 0);
-  }
-
-  to {
-    border-color: rgba(255, 255, 255, 0.25);
-    transform: translate3d(14px, 14px, 0);
-  }
-}
-
-@keyframes layer-2-animation {
-  from {
-    border-color: rgba(255, 255, 255, 0.25);
-    transform: translate3d(14px, 14px, 0);
-  }
-
-  to {
-    border-color: rgba(255, 255, 255, 0);
-    transform: translate3d(21px, 21px, 0);
-  }
-}
-
-.avatar:hover .avatar-layer-0 {
-  animation: layer-0-animation 800ms infinite;
-}
-
-.avatar:hover .avatar-layer-1 {
-  animation: layer-1-animation 800ms infinite;
-}
-
-.avatar:hover .avatar-layer-2 {
-  animation: layer-2-animation 800ms infinite;
-}
-
-.title {
-  font-size: 24px;
-  font-weight: 400;
-  line-height: (7 * 5) / 24;
-  margin: 0;
-}
-
-.title-greeting {
-  font-style: italic;
-}
-
-.intro {
-  font-size: 18px;
-  margin: 21px 0 0;
-  line-height: (7 * 4) / 18;
-}
-
-.intro-interest {
-  background: transparent;
-  color: $text-color;
-  font-style: italic;
-}
-
-.subtitle {
-  font-size: 14px;
+strong {
   font-weight: 700;
-  line-height: (7 * 3) / 14;
-  margin: 42px 0 14px;
+  // font-variation-settings: "wght" 500;
+}
+
+main {
+  max-width: 832px;
+  margin: (24 * 8px) auto calc(8 * 16px);
+  padding: 0 24px;
+  box-sizing: content-box;
+}
+
+section {
+  margin-top: 128px;
+}
+
+section h3 {
+  font-family: "PP Neue Machina";
+  // font-style: normal;
+  font-weight: 700;
+  // font-variation-settings: "wght" 700;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 56px;
+  letter-spacing: 2px;
   text-transform: uppercase;
 }
 
-.projectList {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.project {
-  align-items: center;
+.tile {
+  background: rgba(17, 0, 209, 0.05);
+  padding: 56px 56px 0;
+  margin-left: -56px;
+  border-radius: 24px;
+  margin-bottom: 24px;
   display: flex;
+  flex-direction: row;
 }
 
-.project-icon {
-  margin-right: 20px;
-}
-
-.project-iconImage {
-  border-radius: 10px;
-  display: block;
-  width: 57px;
-}
-
-.project-title {
-  font-style: italic;
+.tile-heading {
   margin: 0;
+  font-family: "PP Neue Machina";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 140%;
+  color: var(--color-text);
 }
 
-.project-tagList {
-  color: rgba(255, 255, 255, 0.55);
+.tile-content {
+  width: 60%;
+  padding-right: 24px;
+}
+
+.tile-image-mask {
+  height: 407px;
+  overflow: hidden;
+  width: 40%;
+}
+
+// .tile-image {
+// }
+
+.tile-description {
+  font-family: "PP Neue Machina";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 140%;
+  /* or 50px */
+  margin: 20px 0 0;
+  // width: calc((3 / 5) * 100%);
+  color: #0b0089;
+}
+
+.tagList {
+  margin: 32px 0;
   list-style: none;
-  margin: 0;
   padding: 0;
+  /* width: calc((3/5) * 100%); */
 }
 
-.project-tagListItem {
+.tagList li {
   display: inline-block;
+  padding: 9px 13px;
+  background: rgba(11, 0, 137, 0.15);
+  margin-bottom: 12px;
+  margin-right: 12px;
+  font-family: "PP Neue Machina";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 140%;
+  border-radius: 6px;
 }
 
-.photoList {
-  display: grid;
-  grid-gap: 10px;
-  grid-gap: 12px;
-  grid-template-columns: repeat(3, 1fr);
-  list-style: none;
+.experience {
+  margin-top: calc(4 * 8px);
+}
+
+.experience-title {
+  font-family: "PP Neue Machina";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 160%;
+  color: #0b0089;
   margin: 0;
-  padding: 0;
 }
 
-.thumbnail-image {
+.experience-title.disabled {
+  color: rgba(11, 0, 137, 0.3);
+  display: inline-block;
+  font-weight: 300;
+}
+
+.experience-desc {
+  font-family: "PP Neue Machina";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 160%;
+  color: #0b0089;
+  margin: 0;
+}
+
+p {
+  font-family: "PP Neue Machina";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 42px;
+  line-height: 160%;
+  /* or 48px */
+  color: #0b0089;
+  margin: 0;
+}
+
+.separator:before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: rgba(11, 0, 137, 0.15);
+  display: inline-block;
+  border-radius: 5px;
+  margin: 0 24px 4px;
+}
+
+.email {
+  font-family: "PP Neue Machina";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 84px;
+  line-height: 160%;
+  display: block;
+  color: #0b0089;
+  text-decoration: none;
+  margin-bottom: 128px;
+  word-wrap: break-word;
+}
+
+.credits {
+  margin-top: 192px;
+  font-size: 12px;
+  line-height: 160%;
+}
+
+.app-selector {
+  display: grid;
+  gap: 32px;
+  margin-top: 32px;
+  grid-auto-flow: column;
+  justify-content: center;
+}
+
+.app-selector-item {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.app-selector-item.selected {
+  background: rgba(17, 0, 209, 0.05);
+}
+
+.app-selector-icon {
+  width: 33px;
+  height: 33px;
+  // margin-right: 16px;
+  // border-radius: 9px;
+  // background: lightgray;
+}
+
+.app-selector-label {
+  // text-align: center;
+  line-height: 1;
+  display: block;
+  padding: 2px 8px 0 16px;
+  font-size: 14px;
+  // text-transform: uppercase;
+  font-weight: 400;
+  display: none;
+}
+
+.app-selector-label.selected {
+  display: block;
+  transform: rotate(90deg);
+}
+
+img {
   display: block;
   max-width: 100%;
-}
-
-@media (max-width: 648px) {
-  body {
-    margin: 27px;
-  }
-
-  .photoList {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .thumbnail {
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-  }
-
-  .thumbnail:before {
-    content: '';
-    display: block;
-    padding-top: 100%;
-  }
-
-  .thumbnail-image {
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
 }
