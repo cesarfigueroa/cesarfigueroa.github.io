@@ -31,7 +31,7 @@ layout: null
           {
             root: null,
             rootMargin: "0px",
-            threshold: 0.9,
+            threshold: 0.5,
           }
         );
 
@@ -50,8 +50,8 @@ layout: null
             <source
               type="image/webp"
               srcset="
-                /assets/images/ceez@3x.webp 1x,
-                /assets/images/ceez@3x.webp 2x,
+                /assets/images/ceez@1x.webp 1x,
+                /assets/images/ceez@2x.webp 2x,
                 /assets/images/ceez@3x.webp 3x
               "
             />
@@ -84,10 +84,11 @@ layout: null
           <div class="tile">
             <div class="tile-bg">
               <div class="tile-header">
-                <h3 class="tile-name">Clearcover</h3>
-
                 <p class="tile-desc">
-                  Making car insurance easier and more accessible
+                  Making car insurance easier and more accessible at
+                  <a href="https://clearcover.com" target="_blank"
+                    >Clearcover</a
+                  >
                 </p>
               </div>
 
@@ -102,22 +103,43 @@ layout: null
                 </li>
               </ul>
 
-              <a
-                href="https://apps.apple.com/us/app/clearcover-car-insurance/id1267703900"
-                class="button"
-                >App Store</a
-              >
-              <a
-                href="https://play.google.com/store/apps/details?id=com.clearcover.app&hl=en_US&gl=US"
-                class="button"
-                >Google Play</a
-              >
+              <div class="tile-links">
+                <a
+                  href="https://apps.apple.com/us/app/clearcover-car-insurance/id1267703900"
+                  class="button"
+                  >App Store</a
+                >
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.clearcover.app&hl=en_US&gl=US"
+                  class="button"
+                  >Google Play</a
+                >
+              </div>
 
               <div class="tile-image-mask">
-                <img
-                  src="/assets/images/clearcover-preview.png"
-                  alt="Screenshot of the Clearcover app"
-                />
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcset="
+                      /assets/images/clearcover-preview@2x.webp 1x,
+                      /assets/images/clearcover-preview@2x.webp 2x,
+                      /assets/images/clearcover-preview@3x.webp 3x
+                    "
+                  />
+
+                  <source
+                    srcset="
+                      /assets/images/clearcover-preview@2x.png 1x,
+                      /assets/images/clearcover-preview@2x.png 2x,
+                      /assets/images/clearcover-preview@3x.png 3x
+                    "
+                  />
+
+                  <img
+                    src="/assets/images/clearcover-preview@2x.png"
+                    alt="Screenshot of the Clearcover app on the home screen"
+                  />
+                </picture>
               </div>
             </div>
 
@@ -137,10 +159,9 @@ layout: null
           <div class="tile">
             <div class="tile-bg">
               <div class="tile-header">
-                <h3 class="tile-name">Rise</h3>
-
                 <p class="tile-desc">
-                  Helping people improve their sleep and daily energy
+                  Helping people improve their sleep and daily energy at
+                  <a href="https://risescience.com">Rise Science</a>
                 </p>
               </div>
 
@@ -155,18 +176,38 @@ layout: null
                 </li>
               </ul>
 
-              <a
-                href="https://apps.apple.com/us/app/rise-energy-sleep-tracker/id1453884781"
-                class="button"
-                >App Store</a
-              >
+              <div class="tile-links">
+                <a
+                  href="https://apps.apple.com/us/app/rise-energy-sleep-tracker/id1453884781"
+                  class="button"
+                  >App Store</a
+                >
+              </div>
 
               <div class="tile-image-mask">
-                <img
-                  src="/assets/images/clearcover-preview.png"
-                  alt="Screenshot of the Rise app"
-                  style="filter: blur(1px)"
-                />
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcset="
+                      /assets/images/rise-preview@2x.webp 1x,
+                      /assets/images/rise-preview@2x.webp 2x,
+                      /assets/images/rise-preview@3x.webp 3x
+                    "
+                  />
+
+                  <source
+                    srcset="
+                      /assets/images/rise-preview@2x.png 1x,
+                      /assets/images/rise-preview@2x.png 2x,
+                      /assets/images/rise-preview@3x.png 3x
+                    "
+                  />
+
+                  <img
+                    src="/assets/images/rise-preview@2x.png"
+                    alt="Screenshot of the Rise app on the schedule tab"
+                  />
+                </picture>
               </div>
             </div>
 
@@ -196,32 +237,32 @@ layout: null
 
           <div>
             <h3 class="experience-title">Rise Science</h3>
-            <time datetime="2021/2022" class="experience-date">2021–2022</time>
+            <time datetime="2021" class="experience-date">2021</time>
           </div>
 
           <div>
             <h3 class="experience-title">OkCupid</h3>
-            <time datetime="2020/2021" class="experience-date">2020–2021</time>
+            <time datetime="2020" class="experience-date">2020</time>
           </div>
 
           <div>
             <h3 class="experience-title">Clearcover</h3>
-            <time datetime="2017/2020" class="experience-date">2017–2020</time>
+            <time datetime="2017" class="experience-date">2017</time>
           </div>
 
           <div>
             <h3 class="experience-title">ReviewTrackers</h3>
-            <time datetime="2016/2017" class="experience-date">2016–2017</time>
+            <time datetime="2016" class="experience-date">2016</time>
           </div>
 
           <div>
             <h3 class="experience-title">Avant</h3>
-            <time datetime="2015/2016" class="experience-date">2015–2016</time>
+            <time datetime="2015" class="experience-date">2015</time>
           </div>
 
           <div>
             <h3 class="experience-title">8th Light</h3>
-            <time datetime="2014/2015" class="experience-date">2014–2015</time>
+            <time datetime="2014" class="experience-date">2014</time>
           </div>
         </div>
       </section>

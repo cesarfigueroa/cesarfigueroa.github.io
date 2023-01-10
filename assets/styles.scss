@@ -35,7 +35,8 @@ $width-lg: 800px;
 
 @keyframes hold-up {
   from {
-    transform: perspective(900px) rotateX(20deg) scale(0.9) translateY(-20px);
+    transform: perspective(900px) rotateX(20deg) scale(0.9) translateY(20px);
+    transform-origin: bottom;
     opacity: 0;
   }
 
@@ -71,8 +72,8 @@ strong {
 }
 
 main {
-  max-width: 44rem;
-  padding: 0 20px;
+  max-width: 46rem;
+  padding: 0 1rem;
   margin: 64px auto 0;
 }
 
@@ -215,7 +216,6 @@ section {
 }
 
 .tile {
-  box-shadow: inset -4px 4px 4px var(--color-blue-10);
   overflow: hidden;
   margin: 0;
   width: 100%;
@@ -226,24 +226,24 @@ section {
 }
 
 .tile-bg {
-  padding: var(--tile-padding-y) 0 0 var(--tile-padding-x);
+  box-shadow: inset -4px 4px 4px var(--color-blue-10);
   border-radius: 32px;
 }
 
 .tile-header {
+  padding: var(--tile-padding-y) var(--tile-padding-x) 0 var(--tile-padding-x);
   margin-bottom: 1.5rem;
   padding-right: 2rem;
 }
 
-.tile-name {
-  font-size: 2rem;
-}
-
 .tile-desc {
-  padding-top: 8px;
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 300;
   line-height: 144%;
+}
+
+.tile-links {
+  padding-left: var(--tile-padding-x);
 }
 
 .tile-award-link {
@@ -253,7 +253,7 @@ section {
   padding: 8px;
   margin: 24px auto 0;
   font-weight: 300;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   text-align: center;
 }
 
@@ -270,11 +270,14 @@ section {
   opacity: 0;
   aspect-ratio: 1/1;
   overflow: hidden;
-  padding: 2rem 2rem 0 0;
+  max-width: fit-content;
+  margin: 0 auto;
+  padding: var(--tile-padding-y) var(--tile-padding-x) 0 var(--tile-padding-x);
 }
 
 .tile-bg {
   background: rgba(243, 242, 253, 1);
+  overflow: hidden;
 }
 
 .tile.visible .tile-image-mask {
@@ -286,10 +289,10 @@ section {
     --tile-padding-x: 3rem;
     --tile-padding-y: 3rem;
 
-    width: calc(100% + (var(--tile-padding-x) * 2));
+    width: 112.5%;
     transform: translateX(calc(var(--tile-padding-x) * -1));
     grid-template-columns: 1fr 1fr;
-    gap: 12px;
+    gap: 16px;
   }
 }
 
@@ -302,7 +305,7 @@ section {
 @media (prefers-reduced-motion) {
   .tile-image-mask {
     animation: none;
-    transform: rotate(0deg) scale(1) translateY(0);
+    transform: none;
     opacity: 1;
   }
 }
@@ -311,25 +314,38 @@ section {
 
 .tagList {
   -ms-overflow-style: none;
-  -webkit-mask-image: linear-gradient(to right, black 80%, transparent 100%);
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 15%,
+    #000 85%,
+    transparent 100%
+  );
 
   font-size: 0;
   list-style: none;
   margin: 0 0 8px;
-  mask-image: linear-gradient(to right, black 80%, transparent 100%);
+  padding: 0 var(--tile-padding-x);
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 15%,
+    #000 85%,
+    transparent 100%
+  );
   overflow: scroll;
-  padding: 0;
   scrollbar-width: none;
   white-space: nowrap;
 }
 
 .tagList-item {
-  padding: 11px 13px 8px;
+  padding: 17px 16px 15px;
   background: var(--color-blue-100);
   border: 1px solid var(--color-blue-300);
   margin-right: 0.5rem;
   font-weight: 300;
   font-size: 1rem;
+  line-height: 1;
   display: inline-block;
   border-radius: 9px;
 }
@@ -361,14 +377,20 @@ section {
 // Email & footer ---------------
 
 .email {
-  font-size: 64px;
+  font-size: 4rem;
   text-decoration: none;
   line-height: 100%;
   word-wrap: break-word;
-  font-weight: 800;
+  font-weight: 900;
   letter-spacing: 1px;
   margin: 64px 0;
   display: block;
+}
+
+@media (min-width: $width-md) {
+  .email {
+    font-size: 6rem;
+  }
 }
 
 .email-at {
@@ -392,7 +414,7 @@ footer {
   padding: 0 0 3rem;
 }
 
-@media (min-width: 568px) {
+@media (min-width: $width-md) {
   .copy {
     font-size: 2.5rem;
   }
