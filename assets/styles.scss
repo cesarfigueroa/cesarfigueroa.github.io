@@ -14,6 +14,7 @@ $width-lg: 800px;
   font-weight: 300;
   font-style: normal;
   src: url("../assets/fonts/PPNeueMachina-PlainLight.woff2") format("woff2");
+  font-display: swap;
 }
 
 @font-face {
@@ -21,6 +22,7 @@ $width-lg: 800px;
   font-weight: 700;
   font-style: normal;
   src: url("../assets/fonts/PPNeueMachina-PlainBold.woff2") format("woff2");
+  font-display: swap;
 }
 
 @font-face {
@@ -28,6 +30,7 @@ $width-lg: 800px;
   font-weight: 900;
   font-style: normal;
   src: url("../assets/fonts/PPNeueMachina-PlainBlack.woff2") format("woff2");
+  font-display: swap;
 }
 
 @keyframes hold-up {
@@ -56,7 +59,7 @@ em,
 code,
 pre {
   margin: 0;
-  font-family: "PP Neue Machina";
+  font-family: "PP Neue Machina", "SF Mono", monospace;
 }
 
 h1 strong {
@@ -108,7 +111,6 @@ main {
 body {
   color: var(--color-text);
   background: var(--color-bg);
-  font-display: swap;
 }
 
 a {
