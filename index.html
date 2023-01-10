@@ -12,87 +12,269 @@ layout: null
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
 
+    <meta property="og:title" content="Cesar Figueroa" />
+    <meta
+      property="og:description"
+      content="A digital product engineer & leader"
+    />
+
     <title>Cesar Figueroa</title>
 
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Space+Mono:400,400i,700"
-    />
     <link rel="stylesheet" href="/assets/styles.css" />
+
+    <script>
+      window.addEventListener("load", () => {
+        const markVisible = (entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        };
+
+        const targets = document.querySelectorAll(".tile, .profile-pic-shadow");
+        const observer = new IntersectionObserver(
+          (entries) => entries.forEach(markVisible),
+          {
+            root: null,
+            rootMargin: "0px",
+            threshold: 0.9,
+          }
+        );
+
+        Array.from(targets).forEach((target) => {
+          observer.observe(target);
+        });
+      });
+    </script>
   </head>
 
   <body>
-    <div class="avatar">
-      <img
-        class="avatar-image"
-        src="/assets/images/avatar@2x.jpg"
-        srcset="
-          /assets/images/avatar@2x.jpg 2x,
-          /assets/images/avatar@3x.jpg 3x
-        "
-      />
-
-      <div class="avatar-layer avatar-layer-0"></div>
-      <div class="avatar-layer avatar-layer-1"></div>
-      <div class="avatar-layer avatar-layer-2"></div>
-    </div>
-
-    <h1 class="title">
-      <span class="title-greeting">Hi!</span> I’m César, a user interface
-      engineer working in NYC
-    </h1>
-
-    <p class="intro">
-      I’m helping build the future of auto insurance at
-      <a href="https://clearcover.com/" class="link">Clearcover</a>, where I
-      lead the development of our iOS and Android apps. I’m passionate about
-      <span class="intro-interest">graphic design</span>,
-      <span class="intro-interest">art</span>,
-      <span class="intro-interest">photography</span>,
-      <span class="intro-interest">coffee</span>,
-      <span class="intro-interest">travel</span> and
-      <span class="intro-interest">fashion</span>.
-    </p>
-
-    <h2 class="subtitle">Recent Work</h2>
-    <ul class="projectList">
-      {% for project in site.data.projects %}
-      <li>
-        <a href="{{ project.url }}">
-          <div class="project">
-            <div class="project-icon">
-              <img class="project-iconImage" src="{{ project.iconUrl }}" />
-            </div>
-
-            <div class="project-description">
-              <p class="project-title">{{ project.title }}</p>
-              <ul class="project-tagList">
-                {% for tag in project.tags %}
-                <li class="project-tagListItem">#{{ tag }}</li>
-                {% endfor %}
-              </ul>
-            </div>
-          </div>
-        </a>
-      </li>
-      {% endfor %}
-    </ul>
-
-    <h2 class="subtitle">Photography</h2>
-    <ul class="photoList">
-      {% for photo in site.data.photos %}
-      <li>
-        <div class="thumbnail">
-          <a href="{{ photo.url }}">
-            <img
-              class="thumbnail-image"
-              src="/assets/images/gallery/{{ photo.imageFileName }}@2x.jpg"
-              srcset="/assets/images/gallery/{{ photo.imageFileName }}@2x.jpg 2x, /assets/images/gallery/{{ photo.imageFileName }}@3x.jpg 3x"
+    <main>
+      <div id="intro">
+        <div class="profile-picture">
+          <picture>
+            <source
+              type="image/webp"
+              srcset="
+                /assets/images/ceez@3x.webp 1x,
+                /assets/images/ceez@3x.webp 2x,
+                /assets/images/ceez@3x.webp 3x
+              "
             />
-          </a>
+
+            <source
+              srcset="
+                /assets/images/ceez@1x.jpg 1x,
+                /assets/images/ceez@2x.jpg 2x,
+                /assets/images/ceez@3x.jpg 3x
+              "
+            />
+
+            <img src="/assets/images/ceez@1x.jpg" alt="A responsive image" />
+
+            <div id="shadow-1" class="profile-pic-shadow"></div>
+            <div id="shadow-2" class="profile-pic-shadow"></div>
+            <div id="shadow-3" class="profile-pic-shadow"></div>
+          </picture>
         </div>
-      </li>
-      {% endfor %}
-    </ul>
+
+        <h1>
+          <strong>Cesar Figueroa</strong>digital product engineer & leader
+        </h1>
+      </div>
+
+      <section>
+        <h3 class="section-heading">Selected Works</h3>
+
+        <div class="tile-container">
+          <div class="tile">
+            <div class="tile-bg">
+              <div class="tile-header">
+                <h2 class="tile-name">Clearcover</h2>
+
+                <p class="tile-desc">
+                  Making car insurance easier and more accessible
+                </p>
+              </div>
+
+              <ul class="tagList">
+                <li class="tagList-item">
+                  <strong>Role</strong> Engineering Manager
+                </li>
+
+                <li class="tagList-item">
+                  <strong>Stack</strong> Typescript, Swift, React Native,
+                  Node.js, RxJS, AWS
+                </li>
+              </ul>
+
+              <a
+                href="https://apps.apple.com/us/app/clearcover-car-insurance/id1267703900"
+                class="button"
+                >App Store</a
+              >
+              <a
+                href="https://play.google.com/store/apps/details?id=com.clearcover.app&hl=en_US&gl=US"
+                class="button"
+                >Google Play</a
+              >
+
+              <div class="tile-image-mask">
+                <img src="/assets/images/clearcover-preview.png" />
+              </div>
+            </div>
+
+            <a
+              href="https://www.mobile-webaward.org/mwa/winner.asp?eid=11838"
+              class="tile-award-link"
+            >
+              <img
+                src="/assets/images/award.svg"
+                class="tile-award-link-icon"
+              />
+              Winner, Outstanding Mobile Application
+            </a>
+          </div>
+
+          <div class="tile">
+            <div class="tile-bg">
+              <div class="tile-header">
+                <h2 class="tile-name">Rise</h2>
+
+                <p class="tile-desc">
+                  Helping people improve their sleep and daily energy
+                </p>
+              </div>
+
+              <ul class="tagList">
+                <li class="tagList-item">
+                  <strong>Role</strong>
+                  Lead Engineer
+                </li>
+
+                <li class="tagList-item">
+                  <strong>Stack</strong> Typescript, React Native, GCP
+                </li>
+              </ul>
+
+              <a
+                href="https://apps.apple.com/us/app/rise-energy-sleep-tracker/id1453884781"
+                class="button"
+                >App Store</a
+              >
+
+              <div class="tile-image-mask">
+                <img
+                  src="/assets/images/clearcover-preview.png"
+                  style="filter: blur(1px)"
+                />
+              </div>
+            </div>
+
+            <a
+              href="https://apps.apple.com/us/story/id1621186695"
+              class="tile-award-link"
+            >
+              <img
+                src="/assets/images/award.svg"
+                class="tile-award-link-icon"
+              />
+              Apple App of the Day (2021)
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h3 class="section-heading">Experience</h3>
+
+        <div class="experience">
+          <div>
+            <h4 class="experience-title">Native</h4>
+            <time datetime="2022" class="experience-date">2022</time>
+          </div>
+
+          <div>
+            <h4 class="experience-title">Rise Science</h4>
+            <time datetime="2021/2022" class="experience-date">2021–2022</time>
+          </div>
+
+          <div>
+            <h4 class="experience-title">OkCupid</h4>
+            <time datetime="2020/2021" class="experience-date">2020–2021</time>
+          </div>
+
+          <div>
+            <h4 class="experience-title">Clearcover</h4>
+            <time datetime="2017/2020" class="experience-date">2017–2020</time>
+          </div>
+
+          <div>
+            <h4 class="experience-title">ReviewTrackers</h4>
+            <time datetime="2016/2017" class="experience-date">2016–2017</time>
+          </div>
+
+          <div>
+            <h4 class="experience-title">Avant</h4>
+            <time datetime="2015/2016" class="experience-date">2015–2016</time>
+          </div>
+
+          <div>
+            <h4 class="experience-title">8th Light</h4>
+            <time datetime="2014/2015" class="experience-date">2014–2015</time>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h3 class="section-heading">Strengths &amp; Interests</h3>
+
+        <p class="copy">
+          Interface design, functional programming, type theory, systems design
+          and architecture, animation
+        </p>
+      </section>
+
+      <section>
+        <h3 class="section-heading">Recognition</h3>
+
+        <p class="copy">
+          <a
+            href="https://www.builtinchicago.org/spotlight/2019/05/14/clearcover-insurance-chicago-careers"
+            >Built In Chicago</a
+          >, Web Marketing Association Award (<a
+            href="https://www.mobile-webaward.org/mwa/winner.asp?eid=11838"
+            >2019</a
+          >,
+          <a href="https://www.mobile-webaward.org/mwa/winner.asp?eid=11968"
+            >2020</a
+          >),
+          <a href="https://chicagoinnovation.com/winners/clearcover/"
+            >Chicago Innovation Award</a
+          >
+        </p>
+      </section>
+
+      <section>
+        <h3 class="section-heading">Contact</h3>
+
+        <a class="email" href="mailto:hello@csrf.gr"
+          >hello<wbr /><span class="email-at">@</span>csrf.gr</a
+        >
+
+        <p class="copy">
+          <a href="https://twitter.com/csrfgr">Twitter</a>,
+          <a href="https://www.linkedin.com/in/cesar-figueroa/">LinkedIn</a>,
+          <a href="https://github.com/cesarfigueroa">GitHub</a>,
+          <a href="https://dribbble.com/cesar">Dribbble</a>
+        </p>
+      </section>
+
+      <footer>
+        <p class="colophon">
+          Typeset in PP Neue Machina and using one color in various shades. Made
+          in Brooklyn, NY.
+        </p>
+      </footer>
+    </main>
   </body>
 </html>
