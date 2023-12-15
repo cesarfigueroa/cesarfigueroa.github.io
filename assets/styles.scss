@@ -4,6 +4,7 @@ layout: null
 
 $width-md: 576px;
 $width-lg: 800px;
+$content-width: 46rem;
 
 * {
   box-sizing: border-box;
@@ -72,9 +73,9 @@ strong {
 }
 
 main {
-  max-width: 46rem;
+  max-width: $content-width;
   padding: 0 1rem;
-  margin: 64px auto 0;
+  margin: 8rem auto 0;
 }
 
 #intro h1 {
@@ -395,8 +396,9 @@ section {
 }
 
 footer {
-  margin-top: 8rem;
-  padding: 0 0 3rem;
+  max-width: $content-width;
+  margin: 8rem auto 3rem;
+  padding: 0 1rem;
 }
 
 @media (min-width: $width-md) {
