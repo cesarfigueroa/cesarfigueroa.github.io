@@ -19,15 +19,19 @@ layout: null
 
     <script>
       window.addEventListener("load", () => {
-        const markVisible = (entry) => {
+        const showImage = (entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("visible");
           }
         };
 
+        const hideImage = (element) => {
+          element.classList.remove('visible');
+        }
+
         const targets = document.querySelectorAll(".tile, .profile-pic-shadow");
         const observer = new IntersectionObserver(
-          (entries) => entries.forEach(markVisible),
+          (entries) => entries.forEach(showImage),
           {
             root: null,
             rootMargin: "0px",
@@ -36,6 +40,7 @@ layout: null
         );
 
         Array.from(targets).forEach((target) => {
+          hideImage(target);
           observer.observe(target);
         });
       });
@@ -79,7 +84,7 @@ layout: null
         <h2 class="section-heading">Selected Works</h2>
 
         <div class="tile-container">
-          <div class="tile">
+          <div class="tile visible">
             <div class="tile-bg">
               <div class="tile-header">
                 <p class="tile-desc">
@@ -148,7 +153,7 @@ layout: null
             </a>
           </div>
 
-          <div class="tile">
+          <div class="tile visible">
             <div class="tile-bg">
               <div class="tile-header">
                 <p class="tile-desc">
