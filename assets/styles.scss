@@ -5,6 +5,7 @@ layout: null
 $width-md: 576px;
 $width-lg: 800px;
 $content-width: 46rem;
+$easing-ease-out-back: cubic-bezier(0.34, 1.56, 0.64, 1);
 
 * {
   box-sizing: border-box;
@@ -72,10 +73,19 @@ strong {
   font-weight: 700;
 }
 
-main {
+header,
+main,
+footer {
   max-width: $content-width;
   padding: 0 1rem;
+}
+
+header {
   margin: 8rem auto 0;
+}
+
+main {
+  margin: 0 auto;
 }
 
 #intro h1 {
@@ -95,6 +105,7 @@ main {
   --color-blue-900: rgba(var(--color-blue-base), 0.9);
   --color-blue-700: rgba(var(--color-blue-base), 0.7);
   --color-blue-500: rgba(var(--color-blue-base), 0.5);
+  --color-blue-150: rgba(var(--color-blue-base), 0.15);
   --color-blue-100: rgba(var(--color-blue-base), 0.1);
   --color-blue-10: rgba(var(--color-blue-base), 0.01);
   --color-orange: #ce5d24;
@@ -117,9 +128,14 @@ body {
 
 a {
   color: var(--color-text);
-  text-decoration-color: rgba(11, 0, 137, 0.15);
+  text-decoration-color: var(--color-blue-150);
   text-underline-offset: 3px;
   text-decoration-skip-ink: auto;
+  transition: text-decoration-color 350ms $easing-ease-out-back;
+}
+
+a:hover {
+  text-decoration-color: var(--color-blue-700);
 }
 
 img {
@@ -163,7 +179,7 @@ section {
   right: 0;
   position: absolute;
 
-  transition: 1s transform cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: 1s transform $easing-ease-out-back;
   transition-delay: 1s;
 }
 
@@ -223,7 +239,7 @@ section {
 }
 
 .tile.visible {
-  transition: background-color 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: background-color 300ms $easing-ease-out-back;
 }
 
 .tile-bg {
@@ -266,7 +282,7 @@ section {
 }
 
 .tile-image-mask {
-  animation: hold-up forwards 1000ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  animation: hold-up forwards 1000ms $easing-ease-out-back;
   animation-play-state: paused;
   opacity: 0;
   aspect-ratio: 1/1;
@@ -396,9 +412,7 @@ section {
 }
 
 footer {
-  max-width: $content-width;
-  margin: 8rem auto 3rem;
-  padding: 0 1rem;
+  margin: 12rem auto 3rem;
 }
 
 @media (min-width: $width-md) {
