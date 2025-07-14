@@ -12,7 +12,8 @@ layout: null
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
     <link rel="stylesheet" href="/assets/styles.css" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -26,8 +27,8 @@ layout: null
         };
 
         const hideImage = (element) => {
-          element.classList.remove('visible');
-        }
+          element.classList.remove("visible");
+        };
 
         const targets = document.querySelectorAll(".tile, .profile-pic-shadow");
         const observer = new IntersectionObserver(
@@ -53,20 +54,13 @@ layout: null
         <picture>
           <source
             type="image/webp"
-            srcset="
-              /assets/images/ceez@1x.webp 1x,
-              /assets/images/ceez@2x.webp 2x,
-              /assets/images/ceez@3x.webp 3x
-            " />
+            srcset="/assets/images/ceez.webp"
+          />
 
-          <source
-            srcset="
-              /assets/images/ceez@1x.jpg 1x,
-              /assets/images/ceez@2x.jpg 2x,
-              /assets/images/ceez@3x.jpg 3x
-            " />
-
-          <img src="/assets/images/ceez@1x.jpg" alt="Picture of me, Cesar" />
+          <img
+            src="/assets/images/ceez.jpg"
+            alt="Picture of me, Cesar"
+          />
         </picture>
 
         <div id="shadow-1" class="profile-pic-shadow"></div>
@@ -74,9 +68,7 @@ layout: null
         <div id="shadow-3" class="profile-pic-shadow"></div>
       </div>
 
-      <h1>
-        <strong>Cesar Figueroa</strong>product engineer
-      </h1>
+      <h1><strong>Cesar Figueroa</strong><span>product engineer</span></h1>
     </header>
 
     <main>
@@ -88,32 +80,25 @@ layout: null
             <div class="tile-bg">
               <div class="tile-header">
                 <p class="tile-desc">
-                  Making car insurance easier and more accessible at
-                  <a href="https://clearcover.com" target="_blank">Clearcover</a>
+                  Making car insurance easier and more accessible at Clearcover
                 </p>
+
+                <a
+                  href="https://www.mobile-webaward.org/mwa/winner.asp?eid=11838"
+                  class="tile-award-link"
+                >
+                  <img
+                    src="/assets/images/award.svg"
+                    alt="Award icon"
+                    class="tile-award-link-icon"
+                  />
+                  Outstanding Mobile Application
+                </a>
               </div>
 
-              <ul class="tagList">
-                <li class="tagList-item">
-                  <strong>Role</strong> Engineering Manager
-                </li>
-
-                <li class="tagList-item">
-                  <strong>Stack</strong> Typescript, Swift, React Native, Node.js, RxJS, AWS
-                </li>
-              </ul>
-
               <div class="tile-links">
-                <a
-                  href="https://apps.apple.com/us/app/clearcover-car-insurance/id1267703900"
-                  class="button"
-                  style="margin-right: 8px">
-                  App Store
-                </a>
-                <a
-                  href="https://play.google.com/store/apps/details?id=com.clearcover.app&hl=en_US&gl=US"
-                  class="button">
-                  Google Play
+                <a href="https://clearcover.com" target="_blank" class="button">
+                  <span>View project</span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
                 </a>
               </div>
 
@@ -125,31 +110,24 @@ layout: null
                       /assets/images/clearcover-preview@2x.webp 1x,
                       /assets/images/clearcover-preview@2x.webp 2x,
                       /assets/images/clearcover-preview@3x.webp 3x
-                    " />
+                    "
+                  />
 
                   <source
                     srcset="
                       /assets/images/clearcover-preview@2x.png 1x,
                       /assets/images/clearcover-preview@2x.png 2x,
                       /assets/images/clearcover-preview@3x.png 3x
-                    " />
+                    "
+                  />
 
                   <img
                     src="/assets/images/clearcover-preview@2x.png"
-                    alt="Screenshot of the Clearcover app on the home screen" />
+                    alt="Screenshot of the Clearcover app on the home screen"
+                  />
                 </picture>
               </div>
             </div>
-
-            <a
-              href="https://www.mobile-webaward.org/mwa/winner.asp?eid=11838"
-              class="tile-award-link">
-              <img
-                src="/assets/images/award.svg"
-                alt="Award icon"
-                class="tile-award-link-icon" />
-              Winner, Outstanding Mobile Application
-            </a>
           </div>
 
           <div class="tile visible">
@@ -157,26 +135,25 @@ layout: null
               <div class="tile-header">
                 <p class="tile-desc">
                   Helping people improve their sleep and daily energy at
-                  <a href="https://risescience.com">Rise Science</a>
+                  Rise Science</a>
                 </p>
+
+                <a
+                  href="https://apps.apple.com/us/story/id1621186695"
+                  class="tile-award-link"
+                >
+                  <img
+                    src="/assets/images/award.svg"
+                    alt="Award icon"
+                    class="tile-award-link-icon"
+                  />
+                  Apple App of the Day
+                </a>
               </div>
 
-              <ul class="tagList">
-                <li class="tagList-item">
-                  <strong>Role</strong>
-                  Lead Engineer
-                </li>
-
-                <li class="tagList-item">
-                  <strong>Stack</strong> Typescript, React Native, GCP
-                </li>
-              </ul>
-
               <div class="tile-links">
-                <a
-                  href="https://apps.apple.com/us/app/rise-energy-sleep-tracker/id1453884781"
-                  class="button">
-                  App Store
+                <a class="button" href="https://risescience.com">
+                  <span>View project</span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
                 </a>
               </div>
 
@@ -188,31 +165,24 @@ layout: null
                       /assets/images/rise-preview@2x.webp 1x,
                       /assets/images/rise-preview@2x.webp 2x,
                       /assets/images/rise-preview@3x.webp 3x
-                    " />
+                    "
+                  />
 
                   <source
                     srcset="
                       /assets/images/rise-preview@2x.png 1x,
                       /assets/images/rise-preview@2x.png 2x,
                       /assets/images/rise-preview@3x.png 3x
-                    " />
+                    "
+                  />
 
                   <img
                     src="/assets/images/rise-preview@2x.png"
-                    alt="Screenshot of the Rise app on the schedule tab" />
+                    alt="Screenshot of the Rise app on the schedule tab"
+                  />
                 </picture>
               </div>
             </div>
-
-            <a
-              href="https://apps.apple.com/us/story/id1621186695"
-              class="tile-award-link">
-              <img
-                src="/assets/images/award.svg"
-                alt="Award icon"
-                class="tile-award-link-icon" />
-              Apple App of the Day
-            </a>
           </div>
         </div>
       </section>
@@ -229,11 +199,6 @@ layout: null
           <li>
             <h3 class="experience-title">The Rounds</h3>
             <time datetime="2023" class="experience-date">2023</time>
-          </li>
-
-          <li>
-            <h3 class="experience-title">Native</h3>
-            <time datetime="2022" class="experience-date">2022</time>
           </li>
 
           <li>
@@ -292,8 +257,8 @@ layout: null
         <h2 class="section-heading">Strengths &amp; Interests</h2>
 
         <p class="copy">
-          Interface design, functional programming, type theory, systems design
-          and architecture, animation
+          functional programming, type theory, systems design
+          and architecture, typography, animation
         </p>
       </section>
 
