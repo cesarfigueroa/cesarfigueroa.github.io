@@ -66,9 +66,10 @@ $easing-ease-out-back: cubic-bezier(0.34, 1.56, 0.64, 1);
   --color-bg: rgba(var(--color-blue-base), 0.03);
   --color-tile-bg: rgba(var(--color-blue-base), calc(0.07 + 0.07 * 0.0625));
 
-  --body-spacing: 1rem;
+  --body-spacing: 1.75rem;
 
-  --intro-header-spacing: 48px;
+  --intro-header-gap: 48px;
+  --intro-header-spacing: 8rem;
   --intro-font-size: 1.75rem;
   --experience-title-font-size: 2.5rem;
   --profile-picture-size: 108px;
@@ -134,12 +135,6 @@ footer {
   padding: 0 var(--body-spacing);
 }
 
-@media (max-width: $width-md) {
-  :root {
-    --body-spacing: 2rem;
-  }
-}
-
 main {
   margin: 0 auto;
 }
@@ -147,8 +142,8 @@ main {
 #intro {
   display: flex;
   flex-direction: column;
-  gap: var(--intro-header-spacing);
-  margin: 8rem auto 0;
+  gap: var(--intro-header-gap);
+  margin: var(--intro-header-spacing) auto 0;
 }
 
 #intro h1 {
@@ -167,7 +162,8 @@ main {
 
 @media (max-width: $width-md) {
   :root {
-    --intro-header-spacing: 24px;
+    --intro-header-gap: 24px;
+    --intro-header-spacing: 4rem;
     --intro-font-size: 1.25rem;
   }
 
