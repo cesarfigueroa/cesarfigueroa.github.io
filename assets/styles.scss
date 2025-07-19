@@ -66,7 +66,7 @@ $easing-ease-out-back: cubic-bezier(0.34, 1.56, 0.64, 1);
   --color-bg: rgba(var(--color-blue-base), 0.03);
   --color-tile-bg: rgba(var(--color-blue-base), calc(0.07 + 0.07 * 0.0625));
 
-  --body-spacing: 1.75rem;
+  --body-spacing: 1.5rem;
 
   --intro-header-gap: 48px;
   --intro-header-spacing: 8rem;
@@ -162,14 +162,17 @@ main {
 
 @media (max-width: $width-md) {
   :root {
-    --intro-header-gap: 24px;
+    --intro-header-gap: 32px;
     --intro-header-spacing: 4rem;
     --intro-font-size: 1.25rem;
   }
 
   #intro {
     align-items: center;
-    flex-direction: row;
+  }
+
+  #intro h1 {
+    text-align: center;
   }
 }
 
@@ -264,6 +267,8 @@ section:hover .section-heading {
 // Experience tile ---------------
 
 .tile-container {
+  --tile-copy-font-size: 1.125rem;
+  --tile-border-radius: 24px;
   --tile-padding-x: 2rem;
   --tile-padding-y: 2rem;
 
@@ -287,20 +292,19 @@ section:hover .section-heading {
 
 .tile-bg {
   box-shadow: inset -4px 4px 4px var(--color-blue-10);
-  border-radius: 32px;
+  border-radius: var(--tile-border-radius);
   position: relative;
 }
 
 .tile-header {
   padding: var(--tile-padding-y) var(--tile-padding-x) 0 var(--tile-padding-x);
   margin-bottom: 1.5rem;
-  padding-right: 2rem;
 }
 
 .tile-desc {
   color: var(--color-text-secondary);
   transition: opacity 200ms;
-  font-size: 1.25rem;
+  font-size: var(--tile-copy-font-size);
   font-weight: 300;
   line-height: 144%;
 }
@@ -348,8 +352,10 @@ section:hover .section-heading {
 
 @media (min-width: $width-lg) {
   .tile-container {
-    --tile-padding-x: 3rem;
+    --tile-border-radius: 32px;
+    --tile-copy-font-size: 1.25rem;
     --tile-padding-y: 3rem;
+    --tile-padding-x: 3rem;
 
     width: 112.5%;
     transform: translateX(calc(var(--tile-padding-x) * -1));
