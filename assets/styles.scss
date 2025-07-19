@@ -285,10 +285,6 @@ section:hover .section-heading {
   transition: background-color 300ms $easing-ease-out-back;
 }
 
-.tile a {
-  text-decoration-thickness: 2px;
-}
-
 .tile-bg {
   box-shadow: inset -4px 4px 4px var(--color-blue-10);
   border-radius: 32px;
