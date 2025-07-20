@@ -94,6 +94,12 @@ a {
   transition: text-decoration-color 350ms $easing-ease-out-back;
 }
 
+@media (max-width: $width-md) {
+  a {
+    text-decoration-thickness: 2px;
+  }
+}
+
 a:hover {
   text-decoration-color: var(--color-blue-700);
 }
