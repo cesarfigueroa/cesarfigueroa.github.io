@@ -326,6 +326,11 @@ section:hover .section-heading {
   font-weight: 300;
   margin: 16px 0 32px;
   text-decoration: none;
+  transition: color 350ms $easing-ease-out-back;
+
+  &:hover {
+    color: var(--color-blue);
+  }
 }
 
 .tile-award-link-icon {
