@@ -94,6 +94,12 @@ a {
   transition: text-decoration-color 350ms $easing-ease-out-back;
 }
 
+@media (max-width: $width-md) {
+  a {
+    text-decoration-thickness: 2px;
+  }
+}
+
 a:hover {
   text-decoration-color: var(--color-blue-700);
 }
@@ -320,6 +326,11 @@ section:hover .section-heading {
   font-weight: 300;
   margin: 16px 0 32px;
   text-decoration: none;
+  transition: color 350ms $easing-ease-out-back;
+
+  &:hover {
+    color: var(--color-blue);
+  }
 }
 
 .tile-award-link-icon {
@@ -483,5 +494,13 @@ footer {
 
 .button span {
   font-family: "Helvetica Neue", Helvetica, sans-serif;
-  padding-right: 4px;
+  padding-right: 6px;
+}
+
+.button svg {
+  transition: transform 350ms $easing-ease-out-back;
+}
+
+.button:hover svg {
+  transform: translateX(2px);
 }
