@@ -17,9 +17,9 @@ $easing-ease-out-back: cubic-bezier(0.34, 1.56, 0.64, 1);
 
 @font-face {
   font-family: "PP Neue Machina";
-  font-weight: 700;
+  font-weight: 600;
   font-style: normal;
-  src: url("../assets/fonts/PPNeueMachina-PlainBold.woff2") format("woff2");
+  src: url("../assets/fonts/PPNeueMachina-PlainSemibold.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -126,12 +126,8 @@ pre {
   font-family: "PP Neue Machina", "SF Mono", monospace;
 }
 
-h1 strong {
-  display: block;
-}
-
 strong {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 header,
@@ -158,6 +154,10 @@ main {
   line-height: normal;
   margin: 0;
   padding: 0;
+}
+
+#intro strong {
+  display: block;
 }
 
 #intro span {
@@ -195,7 +195,7 @@ section:hover .section-heading {
 .section-heading {
   font-size: 21px;
   color: var(--color-blue-300);
-  font-weight: 500;
+  font-weight: 300;
   margin-bottom: 32px;
   transition: color 1.5s $easing-ease-out-back;
 }
